@@ -48,6 +48,7 @@ export default function Profile() {
     }
 
     function handleLogout() {
+        console.log('sair');
         dispatch(signOut());
     }
 
@@ -117,10 +118,10 @@ export default function Profile() {
                         onChangeText={setConfirmPassword}
                     />
 
-                    <SubmitButton onPress={handleSubmit}>
+                    <SubmitButton onPress={() => {}}>
                         Atualizar perfil
                     </SubmitButton>
-                    <LogoutButton onPress={handleLogout}>
+                    <LogoutButton onPress={() => console.log('saindo')}>
                         Sair da aplicação
                     </LogoutButton>
                 </Form>

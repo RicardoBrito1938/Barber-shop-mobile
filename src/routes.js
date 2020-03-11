@@ -46,6 +46,9 @@ export default function Routes() {
                 <Stack.Screen
                     name="SelectDateTime"
                     component={SelectDateTime}
+                    options={{
+                        title: 'Seleciona o horario',
+                    }}
                 />
                 <Stack.Screen name="Confirm" component={Confirm} />
             </Stack.Navigator>
