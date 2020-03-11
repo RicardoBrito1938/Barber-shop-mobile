@@ -1,6 +1,7 @@
 import styled from 'styled-components/native';
 import Input from '~/components/Input';
-import Button from '~/components/Button';
+import {RectButton} from 'react-native-gesture-handler';
+import {Button, TouchableOpacity} from 'react-native';
 
 export const Container = styled.SafeAreaView`
     flex: 1;
@@ -31,11 +32,27 @@ export const FormInput = styled(Input)`
     margin-bottom: 10px;
 `;
 
-export const SubmitButton = styled(Button)`
-    margin-top: 5px;
+export const SubmitButton = styled(TouchableOpacity)`
+    height: 46px;
+    background: #3b9eff;
+    border-radius: 4px;
+
+    align-items: center;
+    justify-content: center;
 `;
 
-export const LogoutButton = styled(Button)`
+export const LogoutButton = styled(TouchableOpacity)`
+    height: 46px;
     margin-top: 10px;
     background: #f64c75;
+    border-radius: 4px;
+
+    align-items: center;
+    justify-content: center;
+`;
+
+export const Text = styled.Text`
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
 `;

@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {
     Container,
     Title,
+    Text,
     Form,
     FormInput,
     Separator,
@@ -48,7 +49,6 @@ export default function Profile() {
     }
 
     function handleLogout() {
-        console.log('sair');
         dispatch(signOut());
     }
 
@@ -118,11 +118,12 @@ export default function Profile() {
                         onChangeText={setConfirmPassword}
                     />
 
-                    <SubmitButton onPress={() => {}}>
-                        Atualizar perfil
+                    <SubmitButton onPress={handleSubmit}>
+                        <Text>Atualizar perfil</Text>
                     </SubmitButton>
-                    <LogoutButton onPress={() => console.log('saindo')}>
-                        Sair da aplicação
+
+                    <LogoutButton onPress={handleLogout}>
+                        <Text>Sair da aplicação</Text>
                     </LogoutButton>
                 </Form>
             </Container>
