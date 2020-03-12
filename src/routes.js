@@ -32,22 +32,42 @@ export default function Routes() {
                     headerLeftContainerStyle: {
                         marginLeft: 20,
                     },
-                    headerLeft: () => (
-                        <TouchableOpacity
-                            onPress={() => navigation.navigate('Agendamentos')}>
-                            <Icon name="chevron-left" size={20} color="#fff" />
-                        </TouchableOpacity>
-                    ),
                 }}>
                 <Stack.Screen
                     name="Selecione o Prestador"
                     component={SelectProvider}
+                    options={{
+                        headerLeft: () => (
+                            <TouchableOpacity
+                                onPress={() =>
+                                    navigation.navigate('Agendamentos')
+                                }>
+                                <Icon
+                                    name="chevron-left"
+                                    size={20}
+                                    color="#fff"
+                                />
+                            </TouchableOpacity>
+                        ),
+                    }}
                 />
                 <Stack.Screen
                     name="SelectDateTime"
                     component={SelectDateTime}
                     options={{
                         title: 'Seleciona o horario',
+                        headerLeft: () => (
+                            <TouchableOpacity
+                                onPress={() =>
+                                    navigation.navigate('Selecione o Prestador')
+                                }>
+                                <Icon
+                                    name="chevron-left"
+                                    size={20}
+                                    color="#fff"
+                                />
+                            </TouchableOpacity>
+                        ),
                     }}
                 />
                 <Stack.Screen name="Confirm" component={Confirm} />
