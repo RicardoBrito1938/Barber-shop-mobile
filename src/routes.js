@@ -70,7 +70,25 @@ export default function Routes() {
                         ),
                     }}
                 />
-                <Stack.Screen name="Confirm" component={Confirm} />
+                <Stack.Screen
+                    name="Confirm"
+                    component={Confirm}
+                    options={{
+                        title: 'Confirmar agendamento',
+                        headerLeft: () => (
+                            <TouchableOpacity
+                                onPress={() =>
+                                    navigation.navigate('SelectDateTime')
+                                }>
+                                <Icon
+                                    name="chevron-left"
+                                    size={20}
+                                    color="#fff"
+                                />
+                            </TouchableOpacity>
+                        ),
+                    }}
+                />
             </Stack.Navigator>
         );
     }
